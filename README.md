@@ -39,36 +39,34 @@ This repository is a **starter template** for implementing JWT authentication an
           dotnet ef database update
 ### 3️⃣ Run the Project
 
-🔐 JWT Authentication
--Register: POST /api/auth/register
--Login: POST /api/auth/login (returns JWT token)
--Use the Authorize (🔒) button in Swagger and enter Bearer {token} to test protected endpoints.
+### 🔐 JWT Authentication
+        - Register: POST /api/auth/register
+        - Login: POST /api/auth/login (returns JWT token)
+        - Use the Authorize (🔒) button in Swagger and enter Bearer {token} to test protected endpoints.
 
-🛡️ Protected Endpoints
--✅ /api/user/profile → accessible by any authenticated user
--✅ /api/admin/users → accessible by Admin and SuperAdmin
--✅ /api/superadmin/users → accessible by SuperAdmin only
+### 🛡️ Protected Endpoints
+        - ✅ /api/user/profile → accessible by any authenticated user
+        - ✅ /api/admin/users → accessible by Admin and SuperAdmin
+        - ✅ /api/superadmin/users → accessible by SuperAdmin only
 
 
-🛡️ Roles
+### 🛡️ Roles
 -SuperAdmin
 -Admin
 -User
 
-🗂️ Project Structure
-AspNetCoreJwtAuthStarter/
- ├── Controllers/
- ├── Data/
- ├── Models/
- ├── Services/
- ├── Helpers/
- ├── Program.cs
- ├── appsettings.json
- └── ...
+### 🗂️ Project Structure
+        AspNetCoreJwtAuthStarter/
+         ├── Controllers/
+         ├── Data/
+         ├── Models/
+         ├── Services/
+         ├── Helpers/
+         ├── Program.cs
+         ├── appsettings.json
+         └── ...
 
- 📚 Learning Purpose
-This repository was created as part of my learning journey in mastering ASP.NET Core 8, JWT Authentication, and clean backend structuring.
-
-Feel free to use it, study it, or provide feedback so we can learn together.
+### 📚 Learning Purpose
+This repository was created as part of my learning journey in mastering ASP.NET Core 8, JWT Authentication, and clean backend structuring. Feel free to use it, study it, or provide feedback so we can learn together.
 
 
