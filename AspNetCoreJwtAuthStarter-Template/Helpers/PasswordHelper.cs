@@ -1,0 +1,23 @@
+﻿using System.Security.Cryptography;
+using System.Text;
+
+namespace AspNetCoreJwtAuthStarter_Template.Helpers
+{
+    public class PasswordHelper
+    {
+        public static void  CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
+        {
+            using var HMAC = new HMACSHA512();
+            passwordSalt = HMAC.Key;
+            passwordHash = HMAC.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+        }
+
+        public static bool VerifyPasswordHash(string password, byte[] storedHash, byte[] storedSalt)
+        {
+            using var hmac = new System.Security.Cryptography.HMACSHA512(storedSalt);
+            var computedHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+            return computedHash.SequenceEqual(storedHash);
+        }
+    }
+}
